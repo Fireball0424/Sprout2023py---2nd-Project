@@ -23,17 +23,17 @@ async def on_ready():
 
 @bot.command()
 async def load(ctx, extension):
-    bot.load_extension(f'cmds.{extension}')
+    await bot.load_extension(f'cmds.{extension}')
     await ctx.send(f'Loaded')
 
 @bot.command()
 async def reload(ctx, extension):
-    bot.reload_extension(f'cmds.{extension}')
+    await bot.reload_extension(f'cmds.{extension}')
     await ctx.send(f'Reloaded')
 
 @bot.command()
 async def unload(ctx, extension):
-    bot.unload_extension(f'cmds.{extension}')
+    await bot.unload_extension(f'cmds.{extension}')
     await ctx.send(f'Unloaded')
 
 
