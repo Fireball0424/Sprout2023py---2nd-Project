@@ -42,5 +42,5 @@ class TodoList(Cog_Extension):
     async def ClearTodoList(self, ctx):
        pass 
 
-def setup(bot):
-    bot.add_cog(TodoList(bot))
+async def setup(bot):
+    await bot.add_cog(TodoList(bot))

@@ -9,5 +9,5 @@ class Main(Cog_Extension):
     async def Hello(self, ctx):
         await ctx.send("Hello, world")
 
-def setup(bot):
-    bot.add_cog(Main(bot))
+async def setup(bot):
+    await bot.add_cog(Main(bot))

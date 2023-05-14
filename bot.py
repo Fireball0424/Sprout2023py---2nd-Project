@@ -13,7 +13,11 @@ bot = commands.Bot(command_prefix ="$", intents = discord.Intents.all())
 async def on_ready():
     for FileName in os.listdir('./cmds'):
         if FileName.endswith('.py'):
-            bot.load_extension(f'cmds.{FileName[:-3]}')
+            try:
+                await bot.load_extension(f'cmds.{FileName[:-3]}')
+            except:
+                ...
+    # await bot.load_extension('cmds.main')
     
     print(">>Bot is Online<<")
 

@@ -49,5 +49,5 @@ class Wordle(Cog_Extension):
         
 
 
-def setup(bot):
-    bot.add_cog(Wordle(bot))
+async def setup(bot):
+    await bot.add_cog(Wordle(bot))
